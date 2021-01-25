@@ -14,55 +14,12 @@ public class PlayerController : MonoBehaviour
         public abstract void Execute();
     }
 
-    public class JumpFunction : Command
-    {
-        public override void Execute()
-        {
-            Jump();
-        }
-    }
-
-    public class TelekinesisFunction : Command
-    {
-        public override void Execute()
-        {
-            Telekinesis();
-        }
-    }
-
-
-    public static void Telekinesis()
-    {
-        
-    }
-
-    public static void Jump()
-    {
-        
-    }
-
-    public static void DoMove()
-    {
-        Command keySpace = new JumpFunction();
-        Command keyX = new TelekinesisFunction();
-        
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            keySpace.Execute();
-        }
-
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            keyX.Execute();
-        }
-    }
     
-    
-    public CharacterController characterController;
+    //public CharacterController characterController;
     public float speed = 3;
     
 
-    public Animator animator;
+    //public Animator animator;
     
     // camera and rotation
     public Transform cameraHolder;
@@ -80,11 +37,6 @@ public class PlayerController : MonoBehaviour
         Rotate();
     }
 
-    private void Awake()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }
 
     public void Rotate()
     {
@@ -105,14 +57,15 @@ public class PlayerController : MonoBehaviour
         float horizontalMove = Input.GetAxis("Horizontal");
         float verticalMove = Input.GetAxis("Vertical");
 
-        if (characterController.isGrounded) verticalSpeed = 0;
-        else verticalSpeed -= gravity * Time.deltaTime;
+        //if (characterController.isGrounded) verticalSpeed = 0;
+        //else 
+        verticalSpeed -= gravity * Time.deltaTime;
         Vector3 gravityMove = new Vector3(0, verticalSpeed, 0);
         
         Vector3 move = transform.forward * verticalMove + transform.right * horizontalMove;
-        characterController.Move(speed * Time.deltaTime * move + gravityMove * Time.deltaTime);
+        //characterController.Move(speed * Time.deltaTime * move + gravityMove * Time.deltaTime);
         
-        animator.SetBool("isWalking", verticalMove != 0 || horizontalMove != 0);
+        //animator.SetBool("isWalking", verticalMove != 0 || horizontalMove != 0);
 
         
         
