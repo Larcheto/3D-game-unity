@@ -5,16 +5,20 @@ using UnityEngine;
 public class move : MonoBehaviour  
 {  
     Vector3 Vec;      
-    
+    public Animator animator;
+    public float speed = 3;
     public void Move(){
+        
          if (Input.GetKey(KeyCode.UpArrow))  
         {  
-            this.transform.Translate(Vector3.forward * Time.deltaTime);  
+            this.transform.Translate(Vector3.forward * Time.deltaTime*speed);  
+            animator.SetBool("isWalking", true);
+
         }  
          
         if (Input.GetKey(KeyCode.DownArrow))  
         {  
-            this.transform.Translate(Vector3.back * Time.deltaTime);  
+            this.transform.Translate(Vector3.back * Time.deltaTime*speed);  
         }  
          
         if (Input.GetKey(KeyCode.LeftArrow))  
@@ -26,9 +30,10 @@ public class move : MonoBehaviour
         {  
             this.transform.Rotate(Vector3.up, 10);  
         }  
+
     } 
-    void Start(){}  
-    void Update(){  
+    void Update(){ 
+       animator.SetFloat("vertical", Input.GetAxis("Vertical")); 
        Move();
     }  
 }  
