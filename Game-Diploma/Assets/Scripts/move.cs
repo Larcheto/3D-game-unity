@@ -4,10 +4,10 @@ using UnityEngine;
   
 public class move : MonoBehaviour  
 {  
-    Vector3 Vec;  
-    void Start(){}  
-    void Update(){  
-        if (Input.GetKey(KeyCode.UpArrow))  
+    Vector3 Vec;      
+    
+    public void Move(){
+         if (Input.GetKey(KeyCode.UpArrow))  
         {  
             this.transform.Translate(Vector3.forward * Time.deltaTime);  
         }  
@@ -26,5 +26,9 @@ public class move : MonoBehaviour
         {  
             this.transform.Rotate(Vector3.up, 10);  
         }  
+    } 
+    void Start(){}  
+    void Update(){  
+       Move();
     }  
 }  
