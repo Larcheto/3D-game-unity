@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Move();
-        Rotate();
+       // Rotate();
     }
 
     private void Awake()
@@ -105,6 +105,13 @@ public class PlayerController : MonoBehaviour
         float horizontalMove = Input.GetAxis("Horizontal");
         float verticalMove = Input.GetAxis("Vertical");
 
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+{
+    Vector3 position = this.transform.position;
+    position.x--;
+    this.transform.position = position;
+}
+
         if (characterController.isGrounded) verticalSpeed = 0;
         else verticalSpeed -= gravity * Time.deltaTime;
         Vector3 gravityMove = new Vector3(0, verticalSpeed, 0);
@@ -112,7 +119,7 @@ public class PlayerController : MonoBehaviour
         Vector3 move = transform.forward * verticalMove + transform.right * horizontalMove;
         characterController.Move(speed * Time.deltaTime * move + gravityMove * Time.deltaTime);
         
-        //animator.SetBool("isWalking", verticalMove != 0 || horizontalMove != 0);
+        animator.SetBool("isWalking", verticalMove != 0 || horizontalMove != 0);
 
         
         

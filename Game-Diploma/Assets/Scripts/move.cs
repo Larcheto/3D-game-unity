@@ -15,12 +15,10 @@ public class move : MonoBehaviour
             animator.SetBool("isWalking", true);
 
         }  
-         
-        if (Input.GetKey(KeyCode.DownArrow))  
+         if (Input.GetKey(KeyCode.DownArrow))  
         {  
             this.transform.Translate(Vector3.back * Time.deltaTime*speed);  
         }  
-         
         if (Input.GetKey(KeyCode.LeftArrow))  
         {  
             this.transform.Rotate(Vector3.up, -10);  
@@ -30,6 +28,16 @@ public class move : MonoBehaviour
         {  
             this.transform.Rotate(Vector3.up, 10);  
         }  
+
+        if (Input.GetKey(KeyCode.S))  
+        {  
+            transform.Translate(0.0f, 0f, -0.1f);  
+        }  
+        if (Input.GetKey(KeyCode.W))  
+        {  
+            transform.Translate(0.0f, 0f, 0.1f);  
+        }  
+         
 
     } 
     void Update(){ 
