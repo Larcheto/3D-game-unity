@@ -2,7 +2,7 @@
 using System.Collections.Generic;  
 using UnityEngine;  
   
-public class move : MonoBehaviour  
+public class ArrowMovement : MonoBehaviour  
 {  
     Vector3 Vec;      
     public Animator animator;
@@ -12,8 +12,6 @@ public class move : MonoBehaviour
          if (Input.GetKey(KeyCode.UpArrow))  
         {  
             this.transform.Translate(Vector3.forward * Time.deltaTime*speed);  
-            animator.SetBool("isWalking", true);
-
         }  
          if (Input.GetKey(KeyCode.DownArrow))  
         {  

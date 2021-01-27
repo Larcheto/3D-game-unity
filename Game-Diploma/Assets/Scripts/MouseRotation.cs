@@ -18,10 +18,10 @@ public class MouseRotation : MonoBehaviour
     public void Rotate()
     {
         float horizontalRotation = Input.GetAxis("Mouse X");
-        float verticalRotation = Input.GetAxis("Mouse Y");
+        //float verticalRotation = Input.GetAxis("Mouse Y");
         
         transform.Rotate(0, horizontalRotation * mouseSensitivity, 0);
-        cameraHolder.Rotate(-verticalRotation*mouseSensitivity,0,0);
+        //cameraHolder.Rotate(-verticalRotation*mouseSensitivity,0,0);
 
         Vector3 currentRotation = cameraHolder.localEulerAngles;
         if (currentRotation.x > 180) currentRotation.x -= 360;
