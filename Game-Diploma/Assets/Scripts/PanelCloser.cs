@@ -2,18 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PanelOpener : MonoBehaviour
+public class PanelCloser : MonoBehaviour
 {
     public GameObject Panel;
-    public GameObject FirstButton;
     public GameObject SecondButton;
     
-    public void OpenPanel(){
+    public void ClosePanel(){
         if(Panel != null){
             bool isActive = Panel.activeSelf;
             Panel.SetActive(!isActive);
-            FirstButton.SetActive(false);
-            SecondButton.SetActive(true);
+            SecondButton.SetActive(false);
         }
     }
 }
