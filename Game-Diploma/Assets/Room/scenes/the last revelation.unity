@@ -716,7 +716,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hurray! You found an interesting object. Click on me to find out more
+  m_Text: Hurray! You found an interesting object. Click to find out more
 --- !u!222 &727991796
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1141,6 +1141,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Panel: {fileID: 766520020}
+  FirstButton: {fileID: 1108235216}
+  SecondButton: {fileID: 1568399619}
 --- !u!1001 &1127517152
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1703,7 +1705,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1568399620
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1733,10 +1735,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1568399619}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4db60f3f6d20f0a4e8002a1768fa9f15, type: 3}
+  m_Script: {fileID: 11500000, guid: 06387b4f0f9f74d43ba585c2c605ff43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Panel: {fileID: 766520020}
+  SecondButton: {fileID: 1568399619}
 --- !u!114 &1568399622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1781,7 +1784,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1568399621}
-        m_MethodName: OpenPanel
+        m_MethodName: ClosePanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
