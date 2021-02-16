@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShowText : MonoBehaviour
+public class PopupButton : MonoBehaviour
 {
     public GameObject uiObject;
     void Start()
@@ -13,12 +13,7 @@ public class ShowText : MonoBehaviour
     void OnTriggerEnter(Collider player){
         if(player.gameObject.tag=="Player"){
             uiObject.SetActive(true);
-            //StartCoroutine("WaitForSec");
         }
     }
 
-    // IEnumerator WaitForSec(){
-    //     yield return new WaitForSeconds(5);
-    //     Destroy(uiObject);
-    // }
 }

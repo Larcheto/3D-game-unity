@@ -1,15 +1,14 @@
 ﻿using System.Collections;  
 using System.Collections.Generic;  
 using UnityEngine;  
+
   
 public class ArrowMovement : MonoBehaviour  
 {  
-    Vector3 Vec;      
-    public Animator animator;
+   // Vector3 Vec;      
     public float speed = 3;
-    public void Move(){
-        
-         if (Input.GetKey(KeyCode.UpArrow))  
+    public void Walk(){
+        if (Input.GetKey(KeyCode.UpArrow))  
         {  
             this.transform.Translate(Vector3.forward * Time.deltaTime*speed);  
         }  
@@ -35,11 +34,5 @@ public class ArrowMovement : MonoBehaviour
         {  
             transform.Translate(0.0f, 0f, 0.1f);  
         }  
-         
-
     } 
-    void Update(){ 
-       animator.SetFloat("vertical", Input.GetAxis("Vertical")); 
-       Move();
-    }  
 }  
