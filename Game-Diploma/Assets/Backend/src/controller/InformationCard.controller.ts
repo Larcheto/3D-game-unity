@@ -12,6 +12,7 @@ export const getAllInformationCards = async (
 
     if (!informationCards.length) {
         response.status(404).json({ status: 404, message: 'No Information Cards Found' })
+        return
     }
 
     response.status(200).json({ informationCards })
@@ -27,6 +28,7 @@ export const getInformationCardById = async (
 
     if (!Number(request.params.id)) {
         response.status(400).json({ status: 400, message: 'ID must be number or a numeric string' })
+        return
     }
 
     const informationCard: InformationCard | undefined = await getRepository(
@@ -35,6 +37,7 @@ export const getInformationCardById = async (
 
     if (!informationCard) {
         response.status(404).json({ status: 404, message: 'Information Card Not Found' })
+        return
     }
 
     response.status(200).json(informationCard)

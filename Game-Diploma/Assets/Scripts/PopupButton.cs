@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class PopupButton : MonoBehaviour
 {
-    public GameObject uiObject;
+    public GameObject button;
     void Start()
     {
-        uiObject.SetActive(false);
+        button.SetActive(false);
     }
 
     void OnTriggerEnter(Collider player){
         if(player.gameObject.tag=="Player"){
-            uiObject.SetActive(true);
+            button.SetActive(true);
         }
     }
 
