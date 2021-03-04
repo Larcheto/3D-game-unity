@@ -4,15 +4,15 @@ using UnityEngine;
 
   
 public class ArrowMovement : MonoBehaviour  
-{  
-   // Vector3 Vec;      
+{     
     public float speed = 3;
+
     public void Walk(){
-        if (Input.GetKey(KeyCode.UpArrow))  
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))  
         {  
             this.transform.Translate(Vector3.forward * Time.deltaTime*speed);  
         }  
-         if (Input.GetKey(KeyCode.DownArrow))  
+         if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))  
         {  
             this.transform.Translate(Vector3.back * Time.deltaTime*speed);  
         }  
@@ -20,19 +20,9 @@ public class ArrowMovement : MonoBehaviour
         {  
             this.transform.Rotate(Vector3.up, -10);  
         }  
-        
         if (Input.GetKey(KeyCode.RightArrow))  
         {  
             this.transform.Rotate(Vector3.up, 10);  
-        }  
-
-        if (Input.GetKey(KeyCode.S))  
-        {  
-            transform.Translate(0.0f, 0f, -0.1f);  
-        }  
-        if (Input.GetKey(KeyCode.W))  
-        {  
-            transform.Translate(0.0f, 0f, 0.1f);  
         }  
     } 
 }  
