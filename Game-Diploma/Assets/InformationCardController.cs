@@ -11,16 +11,12 @@ public class InformationCardController : MonoBehaviour
 {
     public Text Content;
     public Text Title;
-    public int id = 1;
-    
-    //private string url = "http://localhost:3000/information-cards";
 
     public void OnButtonGetInfo(){
-        StartCoroutine(GetCardById(id));
+        StartCoroutine(GetCard());
     }
 
-    IEnumerator GetCardById(int id){
-        
+    IEnumerator GetCard(){
         string InformationCardURL = "http://localhost:3000/information-cards/1";
 
         UnityWebRequest InformationCardRequest = UnityWebRequest.Get(InformationCardURL);
@@ -38,7 +34,5 @@ public class InformationCardController : MonoBehaviour
 
         Content.text = content;
         Title.text = title;
-     }
-
-  
+     }  
 }
