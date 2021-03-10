@@ -51,10 +51,21 @@
 			</div>
 		</div>
 	{:else}
+		<div id="fb-root"></div>
+		<script async defer crossorigin="anonymous"
+				src="https://connect.facebook.net/bg_BG/sdk.js#xfbml=1&version=v10.0"
+				nonce="XFt0SvXB">
+		</script>
 		<div class="score-screen">
 			<h1>
 				Your score: {getScore()}
 			</h1>
+			<div class="fb-share-button"
+				 data-href="http://localhost:5000/" 
+				 data-layout="button" data-size="small">
+				 <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A5000%2F&amp;src=sdkpreparse"
+				 class="fb-xfbml-parse-ignore">Share with friends!</a>
+			</div>
 		</div>
 	{/if}
 	
