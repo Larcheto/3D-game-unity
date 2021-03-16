@@ -5,8 +5,6 @@ using UnityEngine.Networking;
 using UnityEngine.UI;
 using SimpleJSON;
 
-
-
 public class InformationCardController : MonoBehaviour
 {
     public Text Content;

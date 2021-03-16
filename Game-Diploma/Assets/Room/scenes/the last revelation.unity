@@ -1063,7 +1063,7 @@ GameObject:
   - component: {fileID: 727991796}
   - component: {fileID: 727991795}
   m_Layer: 5
-  m_Name: Text
+  m_Name: First text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1160,7 +1160,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Content: {fileID: 8786269}
   Title: {fileID: 967286293}
-  id: 0
 --- !u!4 &755196827
 Transform:
   m_ObjectHideFlags: 0
@@ -2128,8 +2127,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraHolder: {fileID: 1708934836}
   mouseSensitivity: 5
-  upLimit: -50
-  downLimit: 50
 --- !u!114 &1358326002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3454,7 +3451,7 @@ GameObject:
   - component: {fileID: 2076448403}
   - component: {fileID: 2076448402}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Second text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

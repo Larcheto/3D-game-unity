@@ -2,6 +2,7 @@ import cors from 'cors'
 import express, { Express } from 'express'
 import { createConnection } from 'typeorm'
 import { router } from './router/InformationCard.router'
+//import { initialiseDB } from './utils/dbInit'
 
 const app: Express = express()
 
@@ -12,4 +13,5 @@ app.use('/information-cards', router)
 
 createConnection().then(() => {
     app.listen(process.env.PORT ?? 3000)
+    //initialiseDB()
 })
