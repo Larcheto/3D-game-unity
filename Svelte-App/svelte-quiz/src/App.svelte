@@ -129,7 +129,7 @@
 				Your score: {getScore()}
 			</h1>
 			<div class="fb-share-button"
-				 data-href="http://localhost:5000/" 
+				 data-href="https://heuristic-lewin-72e643.netlify.app/" 
 				 data-layout="button" data-size="large">
 				 <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A5000%2F&amp;src=sdkpreparse"
 				 class="fb-xfbml-parse-ignore">Share with friends!</a>
