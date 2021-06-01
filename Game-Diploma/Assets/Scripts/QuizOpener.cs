@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class QuizOpener : MonoBehaviour
 {
-    public void OpenQuiz(){
+    void OpenQuiz(){
          Application.OpenURL("https://heuristic-lewin-72e643.netlify.app/");
     }
 }

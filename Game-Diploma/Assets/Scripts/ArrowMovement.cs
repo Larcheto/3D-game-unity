@@ -6,7 +6,7 @@ using UnityEngine;
 public class ArrowMovement : MonoBehaviour  
 {     
     public float speed = 3;
-
+    
     public void Walk(){
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))  
         {  
